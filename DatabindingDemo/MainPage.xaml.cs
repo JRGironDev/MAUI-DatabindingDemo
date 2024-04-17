@@ -1,17 +1,16 @@
-﻿using DatabindingDemo.Models;
+﻿using System.ComponentModel;
+using DatabindingDemo.Models;
 
 namespace DatabindingDemo;
 
-public partial class MainPage : ContentPage
+public partial class MainPage : ContentPage, INotifyPropertyChanged
 {
+	Person person = new Person();
 	public MainPage()
 	{
 		InitializeComponent();
-	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		var person = new Person
+		person = new Person
 		{
 			Name = "John",
 			Phone = "9999",
@@ -19,6 +18,21 @@ public partial class MainPage : ContentPage
 		};
 
 		BindingContext = person;
+	}
+
+	private void OnCounterClicked(object sender, EventArgs e)
+	{
+
+		//person.Name = "Jane";
+		//person.Phone = "8888";
+		//person.Address = "456 Elm St";
+
+		person = new Person
+		{
+			Name = "Jane",
+			Phone = "8888",
+			Address = "456 Elm St"
+		};
 
 		//txtName.BindingContext = person;
 		//txtName.SetBinding(Label.TextProperty, "Name");

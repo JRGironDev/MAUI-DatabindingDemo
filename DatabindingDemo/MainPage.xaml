@@ -14,7 +14,6 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
             Spacing="25">
 
             <!--<Label
@@ -24,19 +23,19 @@
                 HorizontalOptions="Center" 
                 VerticalOptions="Center"/>-->
 
-            <Label
+            <Entry
                 FontSize="50"
                 HorizontalOptions="Center" 
                 Text="{Binding Name}"
                 VerticalOptions="Center"/>
 
-            <Label
+            <Entry
                 FontSize="50"
                 HorizontalOptions="Center" 
                 Text="{Binding Phone}"
                 VerticalOptions="Center"/>
 
-            <Label
+            <Entry
                 FontSize="50"
                 HorizontalOptions="Center" 
                 Text="{Binding Address}"
