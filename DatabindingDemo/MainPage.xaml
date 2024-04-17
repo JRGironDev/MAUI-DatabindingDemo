@@ -17,13 +17,31 @@
             Padding="30,0"
             Spacing="25">
 
-            <Label
+            <!--<Label
                 x:Name="txtName"
                 Text="{Binding Source={StaticResource person}, Path=Name}"
                 FontSize="50"
                 HorizontalOptions="Center" 
+                VerticalOptions="Center"/>-->
+
+            <Label
+                FontSize="50"
+                HorizontalOptions="Center" 
+                Text="{Binding Name}"
                 VerticalOptions="Center"/>
 
+            <Label
+                FontSize="50"
+                HorizontalOptions="Center" 
+                Text="{Binding Phone}"
+                VerticalOptions="Center"/>
+
+            <Label
+                FontSize="50"
+                HorizontalOptions="Center" 
+                Text="{Binding Address}"
+                VerticalOptions="Center"/>
+                
             <Button
                 x:Name="CounterBtn"
                 Text="Click me" 
