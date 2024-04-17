@@ -18,12 +18,12 @@ public partial class MainPage : ContentPage
 			Address = "123 Main St"
 		};
 
-		Binding personBinding = new Binding();
+		//Binding personBinding = new Binding();
 
-		personBinding.Source = person;
-		personBinding.Path = "Name";
+		//personBinding.Source = person;
+		//personBinding.Path = "Name";
 
-		txtName.SetBinding(Label.TextProperty, personBinding);
+		//txtName.SetBinding(Label.TextProperty, personBinding);
 
 	}
 
