@@ -1,4 +1,6 @@
-﻿namespace DatabindingDemo;
+﻿using DatabindingDemo.Pages;
+
+namespace DatabindingDemo;
 
 public partial class App : Application
 {
@@ -6,6 +8,6 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		MainPage = new MainPage();
+		MainPage = new SliderPage();
 	}
 }
