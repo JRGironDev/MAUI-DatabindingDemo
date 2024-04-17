@@ -1,9 +1,9 @@
-﻿namespace DatabindingDemo;
+﻿using DatabindingDemo.Models;
+
+namespace DatabindingDemo;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
@@ -11,14 +11,25 @@ public partial class MainPage : ContentPage
 
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
-		count++;
+		var person = new Person
+		{
+			Name = "John",
+			Phone = "9999",
+			Address = "123 Main St"
+		};
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+		Binding personBinding = new Binding();
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		personBinding.Source = person;
+		personBinding.Path = "Name";
+
+		txtName.SetBinding(Label.TextProperty, personBinding);
+
 	}
+
+
+
+
+
 }
 
